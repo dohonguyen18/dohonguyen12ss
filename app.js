@@ -33,3 +33,4 @@ app.listen(process.env.PORT || 5000,() => {
 })
 
 app.use('/toy',toyController);
+app.use('/toy/list',toyController);
