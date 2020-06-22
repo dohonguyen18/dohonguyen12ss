@@ -18,7 +18,4 @@ var toySchema = new mongoose.Schema({
 })
 
 
-
-
-
 mongoose.model('Toy',toySchema);

@@ -32,7 +32,7 @@ function insertRecord(req,res)
 
    toy.amount = req.body.amount;
 
-   toy.description = req.bod.description;
+   toy.description = req.body.description;
 
    toy.save((err,doc) => {
        if(!err){
@@ -41,7 +41,7 @@ function insertRecord(req,res)
        else{
            
           if(err.name == "ValidationError"){
-              handleValidationError(err,req.body);
+              //handleValidationError(err,req.body);
               res.render("toy/addOrEdit",{
                   viewTitle:"Insert Product",
                   toy:req.body
@@ -62,7 +62,7 @@ function updateRecord(req,res)
         else{
             if(err.name == "ValidationError")
             {
-                handleValidationError(err,req.body);
+                //handleValidationError(err,req.body);
                 res.render("toy/addOrEdit",{
                     viewTitle:'Update Product',
                     toy:req.body
